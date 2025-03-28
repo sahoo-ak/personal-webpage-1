@@ -7,6 +7,9 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // This enables static export
+  basePath: process.env.NODE_ENV === 'production' ? '/personal-webpage-1' : '', // Replace with your repo name
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-webpage-1/' : '', // Same as above
   eslint: {
     ignoreDuringBuilds: true,
   },
