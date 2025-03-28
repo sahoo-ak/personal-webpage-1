@@ -19,6 +19,19 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     if (window.location.hash) {
       setActiveSection(window.location.hash.substring(1))
     }
+
+    // Listen for the custom event from SectionObserver
+    const handleSectionInView = (event: CustomEvent) => {
+      setActiveSection(event.detail.sectionId)
+    }
+
+    // Add event listener for the custom event
+    document.addEventListener("sectionInView", handleSectionInView as EventListener)
+
+    // Clean up
+    return () => {
+      document.removeEventListener("sectionInView", handleSectionInView as EventListener)
+    }
   }, [])
 
   // Handle click on navigation links
@@ -40,7 +53,7 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
           <Link
             key={section.id}
             href={`#${section.id}`}
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative"
           >
             {section.label}
           </Link>
@@ -55,12 +68,17 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
         <Link
           key={section.id}
           href={`#${section.id}`}
-          className={`text-sm font-medium transition-colors ${
-            activeSection === section.id ? "text-primary font-bold" : "text-muted-foreground hover:text-primary"
+          className={`text-sm font-medium transition-colors relative group ${
+            activeSection === section.id ? "text-primary" : "text-muted-foreground hover:text-primary"
           }`}
           onClick={(e) => handleNavClick(e, section.id)}
         >
           {section.label}
+          <span
+            className={`absolute bottom-[-4px] left-0 h-[2px] bg-blue-800 transition-all duration-300 ease-in-out ${
+              activeSection === section.id ? "w-full" : "w-0 group-hover:w-full"
+            }`}
+          />
         </Link>
       ))}
     </nav>

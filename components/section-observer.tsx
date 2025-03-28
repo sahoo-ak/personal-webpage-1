@@ -18,23 +18,24 @@ export function SectionObserver({ sections, children }: SectionObserverProps) {
     // Set up intersection observer to detect which section is in view
     const observerOptions = {
       root: null, // viewport
-      rootMargin: "-20% 0px -70% 0px", // Consider section in view when it's 20% from the top and 70% from the bottom
-      threshold: 0,
+      rootMargin: "-10% 0px -80% 0px", // Adjusted margins for better detection
+      threshold: 0.1, // Require at least 10% of the section to be visible
     }
 
     const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Update URL without scrolling
-          history.replaceState(null, null, `#${entry.target.id}`)
+      // Find the first section that is intersecting
+      const visibleEntry = entries.find((entry) => entry.isIntersecting)
 
-          // Dispatch a custom event that the navbar can listen to
-          const event = new CustomEvent("sectionInView", {
-            detail: { sectionId: entry.target.id },
-          })
-          document.dispatchEvent(event)
-        }
-      })
+      if (visibleEntry) {
+        // Update URL without scrolling
+        history.replaceState(null, null, `#${visibleEntry.target.id}`)
+
+        // Dispatch a custom event that the navbar can listen to
+        const event = new CustomEvent("sectionInView", {
+          detail: { sectionId: visibleEntry.target.id },
+        })
+        document.dispatchEvent(event)
+      }
     }
 
     const observer = new IntersectionObserver(observerCallback, observerOptions)

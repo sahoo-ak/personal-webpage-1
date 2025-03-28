@@ -20,12 +20,15 @@ import { NavbarWithActiveSection } from "@/components/navbar-with-active-section
 import { SectionObserver } from "@/components/section-observer"
 
 export function PersonalWebsiteContent() {
+  // Update the sections array to include Home instead of About, and add Awards and Experience
   const sections = [
-    { id: "about", label: "About" },
+    { id: "home", label: "Home" },
     { id: "education", label: "Education" },
     { id: "research", label: "Research" },
     { id: "publications", label: "Publications" },
     { id: "conferences", label: "Conferences" },
+    { id: "experience", label: "Experience" },
+    { id: "awards", label: "Awards" },
     { id: "skills", label: "Skills" },
   ]
 
@@ -44,7 +47,7 @@ export function PersonalWebsiteContent() {
       <main className="flex-1">
         {/* Wrap all sections with the observer component */}
         <SectionObserver sections={sections}>
-          <section className="container py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section id="home" className="container py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-16">
               <div className="space-y-6">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Dr. Alex Chen</h1>
@@ -133,27 +136,6 @@ export function PersonalWebsiteContent() {
                   priority
                 />
               </div>
-            </div>
-          </section>
-
-          <section id="about" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">About Me</h2>
-            <div className="text-muted-foreground max-w-3xl mx-auto">
-              <p className="mb-4">
-                I am a Postdoctoral Researcher in the Department of Physics at the University of Science & Technology.
-                My research focuses on quantum field theory and its applications to condensed matter systems,
-                particularly topological phases of matter and strongly correlated electron systems.
-              </p>
-              <p className="mb-4">
-                I received my Ph.D. in Theoretical Physics from Princeton University in 2020, where I worked on
-                developing theoretical frameworks for understanding exotic quantum phases in low-dimensional systems.
-              </p>
-              <p>
-                Currently, I collaborate with both theoretical and experimental groups to bridge the gap between
-                theoretical predictions and experimental realizations of novel quantum phenomena. My work aims to
-                advance our understanding of quantum materials and their potential applications in quantum information
-                processing.
-              </p>
             </div>
           </section>
 
@@ -689,6 +671,172 @@ export function PersonalWebsiteContent() {
                 </div>
               </TabsContent>
             </Tabs>
+          </section>
+
+          <section id="experience" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
+              Professional Experience
+            </h2>
+
+            <div className="space-y-10 max-w-4xl mx-auto">
+              <div className="relative pl-8 border-l-2 border-muted">
+                <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+                <div className="space-y-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <h3 className="text-xl font-bold">Postdoctoral Researcher</h3>
+                    <span className="text-sm text-muted-foreground">2020 - Present</span>
+                  </div>
+                  <p className="font-medium">University of Science & Technology, Department of Physics</p>
+                  <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                    <li>Lead research on topological phases of matter and strongly correlated electron systems</li>
+                    <li>Collaborate with experimental groups to design and characterize new quantum materials</li>
+                    <li>Mentor graduate students on research projects related to quantum field theory</li>
+                    <li>Secured $250,000 in research funding through competitive grant applications</li>
+                    <li>
+                      Published 8 peer-reviewed papers in high-impact journals including Nature Physics and Physical
+                      Review Letters
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="relative pl-8 border-l-2 border-muted">
+                <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+                <div className="space-y-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <h3 className="text-xl font-bold">Research Assistant</h3>
+                    <span className="text-sm text-muted-foreground">2016 - 2020</span>
+                  </div>
+                  <p className="font-medium">Princeton University, Department of Physics</p>
+                  <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                    <li>Conducted research on quantum criticality in low-dimensional systems</li>
+                    <li>Developed numerical methods for studying entanglement properties of many-body systems</li>
+                    <li>Assisted in teaching undergraduate physics courses and laboratory sessions</li>
+                    <li>Presented research findings at 5 international conferences</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="relative pl-8 border-l-2 border-muted">
+                <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+                <div className="space-y-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <h3 className="text-xl font-bold">Summer Research Intern</h3>
+                    <span className="text-sm text-muted-foreground">Summer 2015</span>
+                  </div>
+                  <p className="font-medium">CERN, Theoretical Physics Department</p>
+                  <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                    <li>Participated in a 10-week research program on quantum field theory and particle physics</li>
+                    <li>Developed computational models for simulating high-energy particle interactions</li>
+                    <li>
+                      Collaborated with an international team of researchers and presented findings at the
+                      end-of-program symposium
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="awards" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
+              Awards & Honors
+            </h2>
+
+            <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Young Investigator Award</h3>
+                      <p className="text-sm text-muted-foreground mt-1">American Physical Society, 2023</p>
+                      <p className="mt-2 text-muted-foreground">
+                        Awarded for outstanding contributions to the field of condensed matter physics by a researcher
+                        under the age of 35.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Breakthrough New Horizons Prize</h3>
+                      <p className="text-sm text-muted-foreground mt-1">Breakthrough Prize Foundation, 2022</p>
+                      <p className="mt-2 text-muted-foreground">
+                        Recognized for groundbreaking work on topological phases of matter and their potential
+                        applications in quantum computing.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Princeton Presidential Fellowship</h3>
+                      <p className="text-sm text-muted-foreground mt-1">Princeton University, 2016-2020</p>
+                      <p className="mt-2 text-muted-foreground">
+                        Prestigious fellowship awarded to exceptional doctoral candidates, providing full funding and
+                        research support.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Best Paper Award</h3>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        International Conference on Quantum Matter, 2021
+                      </p>
+                      <p className="mt-2 text-muted-foreground">
+                        Awarded for the paper "Entanglement Entropy Scaling at Quantum Critical Points with Emergent
+                        Gauge Fields."
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="md:col-span-2">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">National Science Foundation CAREER Award</h3>
+                      <p className="text-sm text-muted-foreground mt-1">National Science Foundation, 2022-2027</p>
+                      <p className="mt-2 text-muted-foreground">
+                        Five-year, $500,000 grant to support research on "Novel Quantum Materials for Next-Generation
+                        Quantum Computing." This prestigious award supports early-career faculty who have the potential
+                        to serve as academic role models in research and education.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </section>
 
           <section id="skills" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
