@@ -1,6 +1,8 @@
-import type { Conference } from "@/types"
+import type { AcademicEvent } from "@/types"
 
-export const conferences: Conference[] = [
+// Add the academicEvents export that combines conferences and schools
+export const academicEvents: AcademicEvent[] = [
+  // Add conferences
   {
     title: "APS March Meeting 2023",
     location: "Las Vegas, Nevada, USA",
@@ -8,7 +10,7 @@ export const conferences: Conference[] = [
     role: 'Talk: "Topological Order and Quantum Criticality in Twisted Bilayer Graphene"',
     description:
       "Presented recent findings on the interplay between topology and quantum criticality in twisted bilayer graphene, focusing on the emergence of novel quantum phases at magic angles.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "conference",
   },
   {
     title: "International Conference on Topological Quantum Matter",
@@ -17,7 +19,7 @@ export const conferences: Conference[] = [
     role: 'Poster: "Entanglement Entropy Scaling at Quantum Critical Points with Emergent Gauge Fields"',
     description:
       "Presented a poster on novel entanglement entropy scaling laws at quantum critical points characterized by emergent gauge fields, with implications for quantum information theory.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "conference",
   },
   {
     title: "Quantum Matter Symposium",
@@ -26,11 +28,9 @@ export const conferences: Conference[] = [
     role: 'Invited Talk: "Non-Fermi Liquid Behavior in Strongly Correlated Electron Systems"',
     description:
       "Delivered an invited talk on recent advances in understanding non-Fermi liquid behavior using renormalization group techniques, with applications to strange metal phases in high-temperature superconductors.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "conference",
   },
-]
-
-export const schools: Conference[] = [
+  // Add schools
   {
     title: "Aspen Winter Conference on Quantum Matter",
     location: "Aspen Center for Physics, Colorado, USA",
@@ -38,7 +38,7 @@ export const schools: Conference[] = [
     role: "Participant",
     description:
       "Participated in intensive discussions and workshops on recent developments in quantum matter research, focusing on topological phases and strongly correlated systems.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "school",
   },
   {
     title: "Les Houches Summer School on Quantum Information and Quantum Matter",
@@ -47,7 +47,7 @@ export const schools: Conference[] = [
     role: "Participant",
     description:
       "Attended lectures and workshops on the intersection of quantum information theory and condensed matter physics, with a focus on entanglement in many-body systems.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "school",
   },
   {
     title: "KITP Program on Quantum Matter",
@@ -56,7 +56,7 @@ export const schools: Conference[] = [
     role: "Visiting Researcher",
     description:
       "Participated in a long-term research program on quantum matter, collaborating with leading researchers in the field and presenting work on topological phases in non-Hermitian systems.",
-    logo: "/placeholder.svg?height=100&width=100",
+    type: "school",
   },
 ]
 

@@ -52,15 +52,6 @@ export interface Publication {
   }
 }
 
-export interface Conference {
-  title: string
-  location: string
-  date: string
-  role: string
-  description: string
-  logo: string
-}
-
 export interface Experience {
   title: string
   company: string
@@ -100,5 +91,14 @@ export interface ContactInfo {
     city: string
   }
   orcid: string
+}
+
+export interface AcademicEvent {
+  title: string
+  location: string
+  date: string
+  role: string
+  description: string
+  type: "conference" | "school"
 }
 

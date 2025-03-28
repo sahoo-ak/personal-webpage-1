@@ -12,11 +12,13 @@ import { personalInfo, socialLinks, navigationSections } from "@/data/profile"
 import { educationData } from "@/data/education"
 import { researchAreas, researchProjects } from "@/data/research"
 import { recentPublications, selectedPublications } from "@/data/publications"
-import { conferences, schools } from "@/data/conferences"
+// Update the imports to include the new academicEvents data
+import { academicEvents } from "@/data/conferences"
 import { experienceData } from "@/data/experience"
 import { awardsData } from "@/data/awards"
 import { programmingSkills, skillCategories, specializedTools } from "@/data/skills"
 import { contactInfo } from "@/data/contact"
+import { MapPin, Presentation, GraduationCap } from "lucide-react"
 
 export function PersonalWebsiteContent() {
   return (
@@ -284,9 +286,11 @@ export function PersonalWebsiteContent() {
                   ))}
                 </div>
 
+                {/* Update the publications section to link to the complete publications page */}
+                {/* Find the "View Complete Publication List" button and replace it with: */}
                 <div className="mt-8 text-center">
                   <Button variant="outline" asChild>
-                    <Link href="#" className="flex items-center">
+                    <Link href="/publications" className="flex items-center">
                       View Complete Publication List <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -370,73 +374,48 @@ export function PersonalWebsiteContent() {
             </Tabs>
           </section>
 
+          {/* Replace the entire conferences section with this combined view: */}
           <section
             id="conferences"
             className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           >
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
-              Conferences & Schools
+              Conferences & Academic Events
             </h2>
 
-            <Tabs defaultValue="conferences" className="w-full">
-              <TabsList className="grid w-full md:w-[400px] grid-cols-2 mx-auto">
-                <TabsTrigger value="conferences">Conferences</TabsTrigger>
-                <TabsTrigger value="schools">Summer Schools</TabsTrigger>
-              </TabsList>
-              <TabsContent value="conferences" className="mt-6">
-                <div className="space-y-8">
-                  {conferences.map((conference, index) => (
-                    <div key={index} className="grid gap-6 md:grid-cols-[100px_1fr] items-start">
-                      <div className="aspect-square relative rounded-lg overflow-hidden bg-muted">
-                        <Image
-                          src={conference.logo || "/placeholder.svg"}
-                          alt={`${conference.title} Logo`}
-                          fill
-                          className="object-contain p-2"
-                        />
+            <div className="space-y-8 max-w-4xl mx-auto">
+              {academicEvents.map((event, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                        {event.type === "conference" ? (
+                          <Presentation className="h-6 w-6 text-primary" />
+                        ) : (
+                          <GraduationCap className="h-6 w-6 text-primary" />
+                        )}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold">{conference.title}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          {conference.location} • {conference.date}
-                        </p>
-                        <p className="mt-2">
-                          <span className="font-medium">Role:</span> {conference.role}
-                        </p>
-                        <p className="mt-1 text-muted-foreground">{conference.description}</p>
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                          <h3 className="text-xl font-bold">{event.title}</h3>
+                          <span className="text-sm text-muted-foreground sm:ml-auto">{event.date}</span>
+                        </div>
+                        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-2">
+                          <div className="flex items-center text-sm text-muted-foreground">
+                            <MapPin className="h-4 w-4 mr-1" />
+                            {event.location}
+                          </div>
+                          <div className="flex items-center text-sm">
+                            <span className="font-medium mr-1">Role:</span> {event.role}
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground">{event.description}</p>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="schools" className="mt-6">
-                <div className="space-y-8">
-                  {schools.map((school, index) => (
-                    <div key={index} className="grid gap-6 md:grid-cols-[100px_1fr] items-start">
-                      <div className="aspect-square relative rounded-lg overflow-hidden bg-muted">
-                        <Image
-                          src={school.logo || "/placeholder.svg"}
-                          alt={`${school.title} Logo`}
-                          fill
-                          className="object-contain p-2"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold">{school.title}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          {school.location} • {school.date}
-                        </p>
-                        <p className="mt-2">
-                          <span className="font-medium">Role:</span> {school.role}
-                        </p>
-                        <p className="mt-1 text-muted-foreground">{school.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </section>
 
           <section id="experience" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
