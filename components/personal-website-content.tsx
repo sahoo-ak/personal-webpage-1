@@ -15,12 +15,12 @@ import {
   Code,
   Globe,
   Database,
+  Download,
 } from "lucide-react"
 import { NavbarWithActiveSection } from "@/components/navbar-with-active-section"
 import { SectionObserver } from "@/components/section-observer"
 
 export function PersonalWebsiteContent() {
-  // Update the sections array to include Home instead of About, and add Awards and Experience
   const sections = [
     { id: "home", label: "Home" },
     { id: "education", label: "Education" },
@@ -127,7 +127,7 @@ export function PersonalWebsiteContent() {
                   </Link>
                 </div>
               </div>
-              <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
+              <div className="relative aspect-square overflow-hidden rounded-full bg-muted">
                 <Image
                   src="/placeholder.svg?height=400&width=400"
                   alt="Dr. Alex Chen"
@@ -370,12 +370,28 @@ export function PersonalWebsiteContent() {
                           </p>
                           <p className="text-sm italic mt-1">Physical Review Letters, 128, 176401 (2023)</p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://journals.aps.org/prl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -390,12 +406,28 @@ export function PersonalWebsiteContent() {
                           <p className="text-sm text-muted-foreground mt-1">A. Chen, T. Rodriguez, S. Kumar</p>
                           <p className="text-sm italic mt-1">Nature Physics, 19, 245-251 (2023)</p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://www.nature.com/nphys/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -411,12 +443,28 @@ export function PersonalWebsiteContent() {
                           <p className="text-sm text-muted-foreground mt-1">A. Chen, P. Anderson, M. Zhang</p>
                           <p className="text-sm italic mt-1">Physical Review B, 105, 195132 (2022)</p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://journals.aps.org/prb/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -431,12 +479,28 @@ export function PersonalWebsiteContent() {
                           <p className="text-sm text-muted-foreground mt-1">A. Chen, H. Wang, K. Lee, D. Miller</p>
                           <p className="text-sm italic mt-1">Science, 375, 1234-1238 (2022)</p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://www.science.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -468,12 +532,28 @@ export function PersonalWebsiteContent() {
                             geometry of bulk spacetime, providing new insights into the AdS/CFT correspondence.
                           </p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://www.nature.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -494,12 +574,28 @@ export function PersonalWebsiteContent() {
                             superconductivity.
                           </p>
                         </div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium flex items-center hover:text-primary transition-colors shrink-0"
-                        >
-                          <BookOpen className="h-4 w-4 mr-1" /> PDF
-                        </Link>
+                        <div className="flex gap-2 shrink-0">
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <BookOpen className="h-4 w-4 mr-1" /> PDF
+                          </Link>
+                          <Link
+                            href="#"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <Download className="h-4 w-4 mr-1" /> BibTeX
+                          </Link>
+                          <Link
+                            href="https://journals.aps.org/prl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                          </Link>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -747,8 +843,8 @@ export function PersonalWebsiteContent() {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
-                      <Award className="h-6 w-6 text-blue-800" />
+                    <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Young Investigator Award</h3>
@@ -765,8 +861,8 @@ export function PersonalWebsiteContent() {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
-                      <Award className="h-6 w-6 text-blue-800" />
+                    <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Breakthrough New Horizons Prize</h3>
@@ -783,8 +879,8 @@ export function PersonalWebsiteContent() {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
-                      <Award className="h-6 w-6 text-blue-800" />
+                    <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Princeton Presidential Fellowship</h3>
@@ -801,8 +897,8 @@ export function PersonalWebsiteContent() {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
-                      <Award className="h-6 w-6 text-blue-800" />
+                    <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Best Paper Award</h3>
@@ -821,8 +917,8 @@ export function PersonalWebsiteContent() {
               <Card className="md:col-span-2">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-blue-100 p-3 flex-shrink-0">
-                      <Award className="h-6 w-6 text-blue-800" />
+                    <div className="rounded-full bg-primary/10 p-3 flex-shrink-0">
+                      <Award className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">National Science Foundation CAREER Award</h3>

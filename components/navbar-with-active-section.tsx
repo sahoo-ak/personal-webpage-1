@@ -18,6 +18,9 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     // Get initial active section from URL hash if present
     if (window.location.hash) {
       setActiveSection(window.location.hash.substring(1))
+    } else {
+      // Default to first section if no hash
+      setActiveSection(sections[0].id)
     }
 
     // Listen for the custom event from SectionObserver
@@ -32,7 +35,7 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     return () => {
       document.removeEventListener("sectionInView", handleSectionInView as EventListener)
     }
-  }, [])
+  }, [sections])
 
   // Handle click on navigation links
   const handleNavClick = (e, sectionId) => {
@@ -75,7 +78,7 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
         >
           {section.label}
           <span
-            className={`absolute bottom-[-4px] left-0 h-[2px] bg-blue-800 transition-all duration-300 ease-in-out ${
+            className={`absolute bottom-[-4px] left-0 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
               activeSection === section.id ? "w-full" : "w-0 group-hover:w-full"
             }`}
           />
