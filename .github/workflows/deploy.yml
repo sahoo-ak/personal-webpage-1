@@ -2,6 +2,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+permissions:
+  contents: read        # Allows reading the repo contents
+  pages: write          # Allows deploying to GitHub Pages
+  id-token: write       # Allows requesting an OIDC token
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
