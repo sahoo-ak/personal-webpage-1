@@ -39,7 +39,6 @@ export interface ResearchProject {
 }
 
 export interface Publication {
-  id: string
   title: string
   authors: string
   journal: string
