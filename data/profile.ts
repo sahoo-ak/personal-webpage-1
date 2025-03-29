@@ -6,7 +6,7 @@ export const personalInfo = {
   title: "Postdoctoral Researcher in Theoretical Physics",
   institution: "University of Science & Technology",
   description: "Specializing in quantum field theory and its applications to condensed matter systems.",
-  profileImage: "/photo-1.JPG?height=400&width=400",
+  profileImage: "/photo-1.JPG",
 }
 
 export const socialLinks: SocialLink[] = [
