@@ -52,7 +52,7 @@ export const navigationSections: Section[] = [
   { id: "education", label: "Education" },
   { id: "research", label: "Research" },
   { id: "publications", label: "Publications" },
-  { id: "conferences", label: "Conferences" },
+  { id: "academic-events", label: "Conferences" },
   { id: "experience", label: "Experience" },
   { id: "awards", label: "Awards" },
   { id: "skills", label: "Skills" },

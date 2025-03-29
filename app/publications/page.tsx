@@ -56,6 +56,7 @@ export default function PublicationsPage() {
                       <Link
                         href={publication.links.pdf}
                         className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                        download={`${publication.id}.pdf`}
                       >
                         <BookOpen className="h-4 w-4 mr-1" /> PDF
                       </Link>
@@ -64,6 +65,7 @@ export default function PublicationsPage() {
                       <Link
                         href={publication.links.bibtex}
                         className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                        download={`${publication.id}.bib`}
                       >
                         <Download className="h-4 w-4 mr-1" /> BibTeX
                       </Link>

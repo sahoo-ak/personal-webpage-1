@@ -39,6 +39,7 @@ export interface ResearchProject {
 }
 
 export interface Publication {
+  id: string
   title: string
   authors: string
   journal: string
@@ -50,6 +51,15 @@ export interface Publication {
     bibtex?: string
     journal?: string
   }
+}
+
+export interface Conference {
+  title: string
+  location: string
+  date: string
+  role: string
+  description: string
+  logo: string
 }
 
 export interface Experience {
