@@ -71,6 +71,7 @@ export const academicEvents: AcademicEvent[] = [
     description:
       "Presented recent findings on the interplay between topology and quantum criticality in twisted bilayer graphene, focusing on the emergence of novel quantum phases at magic angles.",
     type: "conference",
+    featured: true,
   },
   {
     title: "International Conference on Topological Quantum Matter",
@@ -80,6 +81,7 @@ export const academicEvents: AcademicEvent[] = [
     description:
       "Presented a poster on novel entanglement entropy scaling laws at quantum critical points characterized by emergent gauge fields, with implications for quantum information theory.",
     type: "conference",
+    featured: true,
   },
   {
     title: "Quantum Matter Symposium",
@@ -88,6 +90,26 @@ export const academicEvents: AcademicEvent[] = [
     role: 'Invited Talk: "Non-Fermi Liquid Behavior in Strongly Correlated Electron Systems"',
     description:
       "Delivered an invited talk on recent advances in understanding non-Fermi liquid behavior using renormalization group techniques, with applications to strange metal phases in high-temperature superconductors.",
+    type: "conference",
+    featured: true,
+  },
+  // Add additional conferences
+  {
+    title: "American Physical Society Annual Meeting",
+    location: "Chicago, Illinois, USA",
+    date: "April 2022",
+    role: 'Contributed Talk: "Emergent Gauge Fields in Strongly Correlated Electron Systems"',
+    description:
+      "Presented research on emergent gauge fields in strongly correlated electron systems and their role in determining the low-energy physics of these systems.",
+    type: "conference",
+  },
+  {
+    title: "International Conference on Quantum Information",
+    location: "Singapore",
+    date: "January 2022",
+    role: 'Poster: "Entanglement Properties of Topological Phases"',
+    description:
+      "Presented a poster on the entanglement properties of topological phases and their applications to quantum information processing.",
     type: "conference",
   },
   // Add schools
@@ -99,6 +121,7 @@ export const academicEvents: AcademicEvent[] = [
     description:
       "Participated in intensive discussions and workshops on recent developments in quantum matter research, focusing on topological phases and strongly correlated systems.",
     type: "school",
+    featured: true,
   },
   {
     title: "Les Houches Summer School on Quantum Information and Quantum Matter",
@@ -116,6 +139,25 @@ export const academicEvents: AcademicEvent[] = [
     role: "Visiting Researcher",
     description:
       "Participated in a long-term research program on quantum matter, collaborating with leading researchers in the field and presenting work on topological phases in non-Hermitian systems.",
+    type: "school",
+  },
+  // Add additional schools/workshops
+  {
+    title: "Boulder Summer School for Condensed Matter Physics",
+    location: "University of Colorado, Boulder, USA",
+    date: "July 2020",
+    role: "Student",
+    description:
+      "Attended lectures and workshops on topological phases of matter and quantum information theory, with a focus on applications to quantum computing.",
+    type: "school",
+  },
+  {
+    title: "Quantum Materials Workshop",
+    location: "Max Planck Institute, Dresden, Germany",
+    date: "May 2021",
+    role: "Invited Participant",
+    description:
+      "Participated in a workshop focused on recent developments in quantum materials research, with emphasis on experimental techniques and theoretical models.",
     type: "school",
   },
 ]

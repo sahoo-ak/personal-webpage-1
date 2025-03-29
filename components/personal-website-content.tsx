@@ -8,7 +8,7 @@ import { HomeSection } from "@/components/sections/home-section"
 import { EducationSection } from "@/components/sections/education-section"
 import { ResearchSection } from "@/components/sections/research-section"
 import { PublicationsSection } from "@/components/sections/publications-section"
-import { AcademicEventsSection } from "@/components/sections/academic-events-section"
+import { ConferencesSection } from "@/components/sections/conferences-section"
 import { ExperienceSection } from "@/components/sections/experience-section"
 import { AwardsSection } from "@/components/sections/awards-section"
 import { SkillsSection } from "@/components/sections/skills-section"
@@ -34,7 +34,7 @@ export function PersonalWebsiteContent() {
           <EducationSection />
           <ResearchSection />
           <PublicationsSection />
-          <AcademicEventsSection />
+          <ConferencesSection />
           <ExperienceSection />
           <AwardsSection />
           <SkillsSection />

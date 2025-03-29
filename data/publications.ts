@@ -6,6 +6,7 @@ export const recentPublications: Publication[] = [
     authors: "A. Chen, A. Johnson, L. Chen, R. Williams",
     journal: "Physical Review Letters, 128, 176401",
     year: 2023,
+    featured: true,
     links: {
       pdf: "#",
       bibtex: "#",
@@ -17,6 +18,7 @@ export const recentPublications: Publication[] = [
     authors: "A. Chen, T. Rodriguez, S. Kumar",
     journal: "Nature Physics, 19, 245-251",
     year: 2023,
+    featured: true,
     links: {
       pdf: "#",
       bibtex: "#",
@@ -28,6 +30,7 @@ export const recentPublications: Publication[] = [
     authors: "A. Chen, P. Anderson, M. Zhang",
     journal: "Physical Review B, 105, 195132",
     year: 2022,
+    featured: true,
     links: {
       pdf: "#",
       bibtex: "#",
@@ -54,6 +57,7 @@ export const selectedPublications: Publication[] = [
     journal: "Nature, 563, 714-718",
     year: 2021,
     citations: 87,
+    featured: true,
     description:
       "This work established a connection between quantum entanglement in boundary theories and the geometry of bulk spacetime, providing new insights into the AdS/CFT correspondence.",
     links: {

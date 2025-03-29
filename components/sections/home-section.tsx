@@ -13,7 +13,7 @@ export function HomeSection() {
             {personalInfo.title} at {personalInfo.institution}, {personalInfo.description}
           </p>
           <div className="flex gap-4">
-            <Button asChild>
+            <Button variant="outline" asChild>
               <Link href="#research">Research Areas</Link>
             </Button>
             <Button variant="outline" asChild>

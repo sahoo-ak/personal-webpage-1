@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useState } from "react"
 
 interface SectionObserverProps {
@@ -44,6 +43,8 @@ export function SectionObserver({ sections, children }: SectionObserverProps) {
       const element = document.getElementById(id)
       if (element) {
         observer.observe(element)
+      } else {
+        console.warn(`Section with id "${id}" not found in the DOM`)
       }
     })
 

@@ -6,7 +6,7 @@ export const personalInfo = {
   title: "Postdoctoral Researcher in Theoretical Physics",
   institution: "University of Science & Technology",
   description: "Specializing in quantum field theory and its applications to condensed matter systems.",
-  profileImage: "/placeholder.svg?height=400&width=400",
+  profileImage: "/photo-1.JPG?height=400&width=400",
 }
 
 export const socialLinks: SocialLink[] = [
@@ -52,7 +52,7 @@ export const navigationSections: Section[] = [
   { id: "education", label: "Education" },
   { id: "research", label: "Research" },
   { id: "publications", label: "Publications" },
-  { id: "academic-events", label: "Conferences" },
+  { id: "conferences", label: "Conferences" },
   { id: "experience", label: "Experience" },
   { id: "awards", label: "Awards" },
   { id: "skills", label: "Skills" },

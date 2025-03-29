@@ -45,6 +45,7 @@ export interface Publication {
   year: number
   citations?: number
   description?: string
+  featured?: boolean
   links: {
     pdf?: string
     bibtex?: string
@@ -109,5 +110,6 @@ export interface AcademicEvent {
   role: string
   description: string
   type: "conference" | "school"
+  featured?: boolean
 }
 
