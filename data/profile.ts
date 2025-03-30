@@ -2,11 +2,11 @@ import { Github, Linkedin, Mail, BookOpen, Users, Award, Globe } from "lucide-re
 import type { SocialLink, Section } from "@/types"
 
 export const personalInfo = {
-  name: "Dr. Alex Chen",
+  name: "Dr. Aloka Kumar Sahoo",
   title: "Postdoctoral Researcher in Theoretical Physics",
-  institution: "University of Science & Technology",
-  description: "Specializing in quantum field theory and its applications to condensed matter systems.",
-  profileImage: "/photo-1.JPG",
+  institution: "Helmholtz-Insitut Jena, Germany",
+  description: "Specializing in Atomic Physics.",
+  profileImage: "./photo-1.JPG",
 }
 
 export const socialLinks: SocialLink[] = [
@@ -42,7 +42,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "Email",
-    url: "mailto:achen@university.edu",
+    url: "mailto:aloka_s@ph.iitr.ac.in, aloka.ku.sahoo@gmail.com",
     icon: Mail,
   },
 ]

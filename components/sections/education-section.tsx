@@ -17,8 +17,9 @@ export function EducationSection() {
               <div className="space-y-2">
                 <h3 className="text-xl font-bold">{educationData[0].degree}</h3>
                 <div className="grid gap-1">
-                  <p className="font-medium">
-                    {educationData[0].institution} ({educationData[0].period})
+                  <p className="font-medium">{educationData[0].institution}</p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium">Year:</span> {educationData[0].period}
                   </p>
                   {educationData[0].gpa && <p className="text-muted-foreground">CGPA: {educationData[0].gpa}</p>}
                   {educationData[0].thesis && (
@@ -35,6 +36,9 @@ export function EducationSection() {
                     <p className="text-muted-foreground">
                       <span className="font-medium">Fellowship:</span> {educationData[0].fellowship}
                     </p>
+                  )}
+                  {educationData[0].description && (
+                    <p className="text-muted-foreground mt-2">{educationData[0].description}</p>
                   )}
                 </div>
               </div>
@@ -54,8 +58,9 @@ export function EducationSection() {
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">{education.degree}</h3>
                     <div className="grid gap-1">
-                      <p className="font-medium">
-                        {education.institution} ({education.period})
+                      <p className="font-medium">{education.institution}</p>
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-medium">Year:</span> {education.period}
                       </p>
                       {education.gpa && <p className="text-muted-foreground">CGPA: {education.gpa}</p>}
                       {education.specialization && (
@@ -88,6 +93,7 @@ export function EducationSection() {
                           <span className="font-medium">Honors:</span> {education.honors}
                         </p>
                       )}
+                      {education.description && <p className="text-muted-foreground mt-2">{education.description}</p>}
                     </div>
                   </div>
                 </div>

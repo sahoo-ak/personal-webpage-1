@@ -9,6 +9,8 @@ export const educationData: Education[] = [
     thesis: "Topological Phases and Quantum Criticality in Low-Dimensional Systems",
     supervisor: "Prof. Robert Johnson",
     fellowship: "Princeton Presidential Fellowship",
+    description:
+      "Focused on developing theoretical frameworks for understanding exotic quantum phases in low-dimensional systems, with applications to quantum computing and high-temperature superconductivity.",
   },
   {
     degree: "M.S. in Physics",
@@ -17,6 +19,8 @@ export const educationData: Education[] = [
     gpa: "3.92/4.0",
     specialization: "Condensed Matter Theory",
     advisor: "Prof. Robert Johnson",
+    description:
+      "Completed coursework in advanced quantum mechanics, statistical mechanics, and condensed matter theory. Research focused on strongly correlated electron systems.",
   },
   {
     degree: "B.S. in Physics (Honors)",
@@ -27,6 +31,8 @@ export const educationData: Education[] = [
     thesis: "Numerical Studies of Quantum Phase Transitions in Spin Systems",
     supervisor: "Prof. Maria Garcia",
     honors: "Summa Cum Laude, Phi Beta Kappa",
+    description:
+      "Comprehensive undergraduate education in physics and mathematics, with honors research in computational physics and quantum phase transitions.",
   },
 ]
 

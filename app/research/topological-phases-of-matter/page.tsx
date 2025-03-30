@@ -123,7 +123,7 @@ export default function TopologicalPhasesPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" asChild>
+          <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
             <Link href="/#research" className="flex items-center">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Research
             </Link>

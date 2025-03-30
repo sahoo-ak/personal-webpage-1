@@ -2,7 +2,31 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ExternalLink, Download, ArrowLeft, BookOpen } from "lucide-react"
-import { allPublications } from "@/data/all-publications"
+import { publications } from "@/data/publications"
+
+// Helper function to highlight author name
+const formatAuthors = (authors: string) => {
+  return authors.split(", ").map((author, index, array) => {
+    const isLastAuthor = index === array.length - 1
+    const separator = isLastAuthor ? "" : ", "
+
+    if (author === "A. Chen" || author === "Ale Chen") {
+      return (
+        <span key={index} className="text-foreground font-medium">
+          {author}
+          {separator}
+        </span>
+      )
+    }
+
+    return (
+      <span key={index}>
+        {author}
+        {separator}
+      </span>
+    )
+  })
+}
 
 export default function PublicationsPage() {
   return (
@@ -32,15 +56,18 @@ export default function PublicationsPage() {
         </div>
 
         <div className="space-y-6">
-          {allPublications.map((publication, index) => (
+          {publications.map((publication, index) => (
             <Card key={index}>
               <CardContent className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-bold">{publication.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{publication.authors}</p>
-                    <p className="text-sm italic mt-1">
-                      {publication.journal} ({publication.year})
+                    <p className="text-sm text-muted-foreground mt-1">{formatAuthors(publication.authors)}</p>
+                    <p className="text-sm mt-1">
+                      <span className="italic">{publication.journal}</span>{" "}
+                      {publication.volume && <span className="font-bold">{publication.volume}</span>}
+                      {publication.issue && <span className="font-bold">({publication.issue})</span>}
+                      {publication.pages && <span>: {publication.pages}</span>} ({publication.year})
                     </p>
                     {publication.citations && (
                       <p className="text-sm mt-2">
@@ -86,7 +113,7 @@ export default function PublicationsPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" asChild>
+          <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
             <Link href="/" className="flex items-center">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
             </Link>

@@ -49,7 +49,7 @@ export function ConferencesSection() {
       </div>
 
       <div className="mt-8 text-center">
-        <Button variant="outline" asChild>
+        <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
           <Link href="/conferences" className="flex items-center">
             View Complete Conference List <ExternalLink className="ml-2 h-4 w-4" />
           </Link>

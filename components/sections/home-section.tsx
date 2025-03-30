@@ -13,10 +13,10 @@ export function HomeSection() {
             {personalInfo.title} at {personalInfo.institution}, {personalInfo.description}
           </p>
           <div className="flex gap-4">
-            <Button variant="outline" asChild>
+            <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
               <Link href="#research">Research Areas</Link>
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
               <Link href="#publications">Publications</Link>
             </Button>
           </div>
@@ -27,7 +27,7 @@ export function HomeSection() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors"
               >
                 <link.icon className="h-6 w-6" />
                 <span className="sr-only">{link.platform}</span>

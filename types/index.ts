@@ -23,6 +23,7 @@ export interface Education {
   advisor?: string
   minor?: string
   honors?: string
+  description?: string
 }
 
 export interface ResearchArea {
@@ -43,6 +44,9 @@ export interface Publication {
   authors: string
   journal: string
   year: number
+  volume?: string
+  issue?: string
+  pages?: string
   citations?: number
   description?: string
   featured?: boolean

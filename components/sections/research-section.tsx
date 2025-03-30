@@ -17,7 +17,7 @@ export function ResearchSection() {
               <p className="text-muted-foreground">{area.description}</p>
             </CardContent>
             <CardFooter className="pt-0 pb-6 px-6">
-              <Button variant="outline" asChild className="w-full">
+              <Button variant="outline" className="border-primary hover:bg-primary/10 w-full" asChild>
                 <Link
                   href={`/research/${area.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className="flex items-center justify-center"
