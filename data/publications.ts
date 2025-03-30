@@ -40,7 +40,7 @@ export const publications: Publication[] = [
     year: 2024,
     featured: true,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdqvtihsUa5EgbUwtS8CZ24BDA96bZCuYJ5CKtRSx2rlmQ?e=ocRjLP",
       bibtex: "#",
       journal: "https://doi.org/10.1140/epjp/s13360-024-05747-2",
     },
@@ -53,7 +53,7 @@ export const publications: Publication[] = [
     pages: "095410",
     year: 2024,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EcFl96JDf-RAsGG7W2-MpAwBMief8zhZtHKSwaPGDzfg0Q?e=1dKNzs",
       bibtex: "#",
       journal: "https://doi.org/10.1088/1402-4896/ad6f51",
     },
@@ -68,7 +68,7 @@ export const publications: Publication[] = [
     year: 2024,
     featured: true,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EQoa56uhN75EsaeEdF7kFVgBTRZTiazltuCRzXxLw9Xj7g?e=xB5tLz",
       bibtex: "#",
       journal: "https://doi.org/10.1140/epjd/s10053-024-00865-z",
     },
@@ -81,7 +81,7 @@ export const publications: Publication[] = [
       pages: "136",
       year: 2022,
       links: {
-        pdf: "#",
+        pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EeMuk4BjXFxGlTYB-9WnM2wBR-GAC7oURcoc-YHNmTO0Tw?e=XNcTfe",
         bibtex: "#",
         journal: "https://doi.org/10.3390/atoms10040136",
       },
@@ -95,7 +95,7 @@ export const publications: Publication[] = [
     pages: "165203",
     year: 2022,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EctHbtVjXPNCs-9LKbOew2YBqMYzeu93Gi4N_4OhjnFTGQ?e=JPG0z9",
       bibtex: "#",
       journal: "https://doi.org/10.1088/1361-6455/ac7924",
     },
@@ -108,7 +108,7 @@ export const publications: Publication[] = [
     pages: "76",
     year: 2021,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdgRXI4GQ2NFs2g1pRz6t5EBEhmQQBz5zx53IIbMIWsbrA?e=8IK5j6",
       bibtex: "#",
       journal: "https://doi.org/10.3390/atoms9040076",
     },
@@ -121,7 +121,7 @@ export const publications: Publication[] = [
     pages: "5147",
     year: 2020,
     links: {
-      pdf: "#",
+      pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdntOCELvw1EscqknUESIQ0BfAsQu_3dDlOSEaPLXjHlAw?e=y5dnLf",
       bibtex: "#",
       journal: "https://doi.org/10.1021/acs.jpca.0c02245",
     },
