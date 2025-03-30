@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button"
-import { Mail, Users, Award, BookOpen } from "lucide-react"
+import { Mail, Users } from "lucide-react"
 import { contactInfo } from "@/data/contact"
+import { GoogleScholarIcon } from "@/components/icons/google-scholar-icon"
+import { ResearchGateIcon } from "@/components/icons/researchgate-icon"
+import { OrcidIcon } from "@/components/icons/orcid-icon"
 
 export function ContactSection() {
   return (
@@ -14,13 +17,13 @@ export function ContactSection() {
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-muted-foreground" />
+              <Mail className="h-5 w-5 text-primary" />
               <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition-colors">
                 {contactInfo.email}
               </a>
             </div>
             <div className="flex items-start gap-3">
-              <Users className="h-5 w-5 mt-1 text-muted-foreground" />
+              <Users className="h-5 w-5 mt-1 text-primary" />
               <div>
                 <p>{contactInfo.address.department}</p>
                 <p>{contactInfo.address.university}</p>
@@ -29,7 +32,7 @@ export function ContactSection() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Award className="h-5 w-5 text-muted-foreground" />
+              <OrcidIcon className="h-5 w-5 text-primary" />
               <a
                 href="https://orcid.org"
                 target="_blank"
@@ -40,7 +43,7 @@ export function ContactSection() {
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <BookOpen className="h-5 w-5 text-muted-foreground" />
+              <GoogleScholarIcon className="h-5 w-5 text-primary" />
               <a
                 href="https://scholar.google.com"
                 target="_blank"
@@ -51,7 +54,7 @@ export function ContactSection() {
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <Users className="h-5 w-5 text-muted-foreground" />
+              <ResearchGateIcon className="h-5 w-5 text-primary" />
               <a
                 href="https://researchgate.net"
                 target="_blank"

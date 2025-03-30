@@ -2,40 +2,30 @@ import type { Skill, SkillCategory, SpecializedTool } from "@/types"
 
 export const programmingSkills: Skill[] = [
   {
-    name: "Python",
-    level: "Expert",
-    percentage: 95,
-  },
-  {
-    name: "MATLAB",
-    level: "Advanced",
-    percentage: 85,
-  },
-  {
-    name: "C++",
-    level: "Intermediate",
-    percentage: 70,
-  },
-  {
     name: "Julia",
-    level: "Intermediate",
-    percentage: 65,
+    level: "Expert",
+    percentage: 90,
   },
   {
     name: "Fortran",
-    level: "Basic",
-    percentage: 40,
+    level: "Advanced",
+    percentage: 80,
+  },
+  {
+    name: "Python",
+    level: "Advanced",
+    percentage: 70,
   },
 ]
 
 export const skillCategories: SkillCategory[] = [
   {
     name: "Operating Systems",
-    skills: ["Linux (Ubuntu, CentOS)", "macOS", "Windows"],
+    skills: ["Linux (Ubuntu, Fedora)", "Windows"],
   },
   {
     name: "Scientific Computing",
-    skills: ["NumPy, SciPy, Pandas", "TensorFlow, PyTorch", "Mathematica"],
+    skills: ["NumPy, SciPy", "TensorFlow"],
   },
   {
     name: "Version Control",
@@ -43,16 +33,12 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Visualization",
-    skills: ["Matplotlib, Seaborn", "Plotly, Bokeh", "ParaView"],
+    skills: ["Plots.jl , Gnuplot", "Matplotlib"],
   },
 ]
 
 export const specializedTools: SpecializedTool[] = [
-  { name: "VASP" },
-  { name: "Quantum ESPRESSO" },
-  { name: "COMSOL" },
-  { name: "ANSYS" },
-  { name: "LaTeX" },
   { name: "High-Performance Computing" },
+  { name: "LaTeX" },
 ]
 

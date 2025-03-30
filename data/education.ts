@@ -2,37 +2,32 @@ import type { Education } from "@/types"
 
 export const educationData: Education[] = [
   {
-    degree: "Ph.D. in Theoretical Physics",
-    institution: "Princeton University, USA",
-    period: "2016-2020",
-    gpa: "3.95/4.0",
-    thesis: "Topological Phases and Quantum Criticality in Low-Dimensional Systems",
-    supervisor: "Prof. Robert Johnson",
-    fellowship: "Princeton Presidential Fellowship",
+    degree: "Ph.D. in Physics",
+    institution: "Indian Institute of Technology Roorkee, Roorkee, India",
+    period: "Dec 2019-Feb2025",
+    thesis: "Theoretical Investigation of Electron Interactions with Complex Atomic Systems: Selected Case Studies",
+    supervisor: "Prof. Lalita Sharma",
     description:
-      "Focused on developing theoretical frameworks for understanding exotic quantum phases in low-dimensional systems, with applications to quantum computing and high-temperature superconductivity.",
+      "A comprehensive theoretical investigation into the atomic structure and electron interactions, focusing on heavy atomic systems with complex electronic configurations. The study includes both elastic scattering and electron impact excitation, employing a relativistic framework to handle the complexities of these systems. Additionally, the research explores the behavior of atomic systems under confinement, providing insights into how confinement affects electron interactions.",
   },
   {
-    degree: "M.S. in Physics",
-    institution: "Princeton University, USA",
-    period: "2016-2017",
-    gpa: "3.92/4.0",
-    specialization: "Condensed Matter Theory",
-    advisor: "Prof. Robert Johnson",
-    description:
-      "Completed coursework in advanced quantum mechanics, statistical mechanics, and condensed matter theory. Research focused on strongly correlated electron systems.",
+    degree: "M.Sc. in Physics",
+    institution: "Indian Institute of Technology (ISM) Dhanbad, Dhanbad, India",
+    period: "2017-2019",
+    gpa: "8.75/10.0",
+    specialization: "Atomic and Molecular Physics",
+    thesis: "Electron and Positron Scattering from Pyridine",
+    advisor: "Prof. Bobby Antony",
+    // description:
+      // "Developed computational models to study electron and positron interactions with molecular systems, contributing to the understanding of fundamental processes in molecular physics.",
   },
   {
-    degree: "B.S. in Physics (Honors)",
-    institution: "Stanford University, USA",
-    period: "2011-2015",
-    gpa: "3.89/4.0",
+    degree: "B.Sc. in Physics (Honors)",
+    institution: "BJB (Auto) College, Utkal University, Bhubaneswar, India",
+    period: "2014-2017",
+    gpa: "77.33%",
     minor: "Mathematics",
-    thesis: "Numerical Studies of Quantum Phase Transitions in Spin Systems",
-    supervisor: "Prof. Maria Garcia",
-    honors: "Summa Cum Laude, Phi Beta Kappa",
-    description:
-      "Comprehensive undergraduate education in physics and mathematics, with honors research in computational physics and quantum phase transitions.",
+    description:"First Class with Distinction.",
   },
 ]
 

@@ -1,15 +1,21 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import type React from "react"
+
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
+import { ChevronDown } from "lucide-react"
+import type { Section, DropdownSection } from "@/types"
 
 interface NavbarProps {
-  sections: { id: string; label: string }[]
+  sections: (Section | DropdownSection)[]
 }
 
 export function NavbarWithActiveSection({ sections }: NavbarProps) {
   const [activeSection, setActiveSection] = useState("")
   const [mounted, setMounted] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
 
   // Only run on client side
   useEffect(() => {
@@ -31,21 +37,46 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     // Add event listener for the custom event
     document.addEventListener("sectionInView", handleSectionInView as EventListener)
 
+    // Handle clicks outside dropdowns
+    const handleClickOutside = (event: MouseEvent) => {
+      if (openDropdown && !dropdownRefs.current[openDropdown]?.contains(event.target as Node)) {
+        setOpenDropdown(null)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+
     // Clean up
     return () => {
       document.removeEventListener("sectionInView", handleSectionInView as EventListener)
+      document.removeEventListener("mousedown", handleClickOutside)
     }
-  }, [sections])
+  }, [sections, openDropdown])
 
   // Handle click on navigation links
-  const handleNavClick = (e, sectionId) => {
+  const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault()
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
       window.history.pushState(null, "", `#${sectionId}`)
       setActiveSection(sectionId)
+      setOpenDropdown(null)
     }
+  }
+
+  // Toggle dropdown
+  const toggleDropdown = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault()
+    setOpenDropdown(openDropdown === sectionId ? null : sectionId)
+  }
+
+  // Check if a section is active (including dropdown items)
+  const isSectionActive = (section: Section | DropdownSection) => {
+    if ("dropdown" in section) {
+      return section.dropdown.some((item) => item.id === activeSection) || section.id === activeSection
+    }
+    return section.id === activeSection
   }
 
   // If not mounted yet, render static links
@@ -67,23 +98,74 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
 
   return (
     <nav className="hidden md:flex gap-6">
-      {sections.map((section) => (
-        <Link
-          key={section.id}
-          href={`#${section.id}`}
-          className={`text-sm font-medium transition-colors relative group ${
-            activeSection === section.id ? "text-primary" : "text-muted-foreground hover:text-primary"
-          }`}
-          onClick={(e) => handleNavClick(e, section.id)}
-        >
-          {section.label}
-          <span
-            className={`absolute bottom-[-4px] left-0 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
-              activeSection === section.id ? "w-full" : "w-0 group-hover:w-full"
-            }`}
-          />
-        </Link>
-      ))}
+      {sections.map((section) => {
+        const isDropdown = "dropdown" in section
+        const isActive = isSectionActive(section)
+
+        return (
+          <div
+            key={section.id}
+            className="relative"
+            ref={(el) => {
+              if (isDropdown) {
+                dropdownRefs.current[section.id] = el
+              }
+            }}
+          >
+            {isDropdown ? (
+              <>
+                <button
+                  className={`text-sm font-medium transition-colors relative group inline-flex items-center gap-1 p-0 border-0 bg-transparent ${
+                    isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
+                  }`}
+                  onClick={(e) => toggleDropdown(e, section.id)}
+                >
+                  {section.label}
+                  <ChevronDown className="h-4 w-4" />
+                  <span
+                    className={`absolute bottom-[-4px] left-0 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </button>
+                {openDropdown === section.id && (
+                  <div className="absolute top-full left-0 mt-2 py-2 bg-background border rounded-md shadow-md min-w-[150px] z-50">
+                    {section.dropdown.map((item) => (
+                      <Link
+                        key={item.id}
+                        href={`#${item.id}`}
+                        className={`block px-4 py-2 text-sm ${
+                          activeSection === item.id
+                            ? "text-primary font-medium"
+                            : "text-muted-foreground hover:text-primary hover:bg-muted"
+                        }`}
+                        onClick={(e) => handleNavClick(e, item.id)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link
+                href={`#${section.id}`}
+                className={`text-sm font-medium transition-colors relative group ${
+                  isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
+                }`}
+                onClick={(e) => handleNavClick(e, section.id)}
+              >
+                {section.label}
+                <span
+                  className={`absolute bottom-[-4px] left-0 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            )}
+          </div>
+        )
+      })}
     </nav>
   )
 }

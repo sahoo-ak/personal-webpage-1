@@ -1,5 +1,8 @@
-import { Github, Linkedin, Mail, BookOpen, Users, Award, Globe } from "lucide-react"
-import type { SocialLink, Section } from "@/types"
+import type { SocialLink, Section, DropdownSection } from "@/types"
+import { GoogleScholarIcon } from "@/components/icons/google-scholar-icon"
+import { ResearchGateIcon } from "@/components/icons/researchgate-icon"
+import { OrcidIcon } from "@/components/icons/orcid-icon"
+import { GitHubIcon } from "@/components/icons/github-icon"
 
 export const personalInfo = {
   name: "Dr. Aloka Kumar Sahoo",
@@ -11,50 +14,43 @@ export const personalInfo = {
 
 export const socialLinks: SocialLink[] = [
   {
-    platform: "GitHub",
-    url: "https://github.com",
-    icon: Github,
-  },
-  {
-    platform: "LinkedIn",
-    url: "https://linkedin.com",
-    icon: Linkedin,
-  },
-  {
     platform: "Google Scholar",
-    url: "https://scholar.google.com",
-    icon: BookOpen,
+    url: "https://scholar.google.com/citations?user=kLeggdsAAAAJ&hl=en",
+    icon: GoogleScholarIcon,
   },
   {
     platform: "ResearchGate",
-    url: "https://researchgate.net",
-    icon: Users,
+    url: "https://www.researchgate.net/profile/Aloka-Sahoo-2",
+    icon: ResearchGateIcon,
   },
   {
     platform: "ORCID",
-    url: "https://orcid.org",
-    icon: Award,
+    url: "https://orcid.org/0000-0003-2441-4075",
+    icon: OrcidIcon,
   },
   {
-    platform: "Web of Science",
-    url: "https://webofscience.com",
-    icon: Globe,
-  },
-  {
-    platform: "Email",
-    url: "mailto:aloka_s@ph.iitr.ac.in, aloka.ku.sahoo@gmail.com",
-    icon: Mail,
+    platform: "GitHub",
+    url: "https://github.com/sahoo-ak",
+    icon: GitHubIcon,
   },
 ]
 
-export const navigationSections: Section[] = [
+export const navigationSections: (Section | DropdownSection)[] = [
   { id: "home", label: "Home" },
   { id: "education", label: "Education" },
   { id: "research", label: "Research" },
   { id: "publications", label: "Publications" },
   { id: "conferences", label: "Conferences" },
-  { id: "experience", label: "Experience" },
+  {
+    id: "experience",
+    label: "Experience",
+    dropdown: [
+      { id: "research-experience", label: "Research" },
+      { id: "teaching-experience", label: "Teaching" },
+    ],
+  },
   { id: "awards", label: "Awards" },
   { id: "skills", label: "Skills" },
+  // Contact section removed from navigation
 ]
 

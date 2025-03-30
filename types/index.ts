@@ -1,14 +1,19 @@
 import type { LucideIcon } from "lucide-react"
+import type { ComponentType, SVGProps } from "react"
 
 export interface SocialLink {
   platform: string
   url: string
-  icon: LucideIcon
+  icon: ComponentType<SVGProps<SVGSVGElement>> | LucideIcon
 }
 
 export interface Section {
   id: string
   label: string
+}
+
+export interface DropdownSection extends Section {
+  dropdown: Section[]
 }
 
 export interface Education {

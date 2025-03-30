@@ -82,17 +82,17 @@ export default function PublicationsPage() {
                     {publication.links.pdf && (
                       <Link
                         href={publication.links.pdf}
-                        className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                        className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                       >
-                        <BookOpen className="h-4 w-4 mr-1" /> PDF
+                        <BookOpen className="h-4 w-4 mr-1 text-primary" /> PDF
                       </Link>
                     )}
                     {publication.links.bibtex && (
                       <Link
                         href={publication.links.bibtex}
-                        className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                        className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                       >
-                        <Download className="h-4 w-4 mr-1" /> BibTeX
+                        <Download className="h-4 w-4 mr-1 text-primary" /> BibTeX
                       </Link>
                     )}
                     {publication.links.journal && (
@@ -100,9 +100,9 @@ export default function PublicationsPage() {
                         href={publication.links.journal}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                        className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                       >
-                        <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                        <ExternalLink className="h-4 w-4 mr-1 text-primary" /> Journal
                       </Link>
                     )}
                   </div>
@@ -115,7 +115,7 @@ export default function PublicationsPage() {
         <div className="mt-12 text-center">
           <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
             <Link href="/" className="flex items-center">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
+              <ArrowLeft className="mr-2 h-4 w-4 text-primary" /> Back to Home
             </Link>
           </Button>
         </div>
@@ -123,7 +123,7 @@ export default function PublicationsPage() {
 
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+          <p className="text-center text-sm leading-loose text-primary md:text-left">
             © {new Date().getFullYear()} Dr. Alex Chen. All rights reserved.
           </p>
         </div>

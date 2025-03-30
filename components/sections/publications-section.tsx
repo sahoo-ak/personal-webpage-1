@@ -63,17 +63,17 @@ export function PublicationsSection() {
                   {publication.links.pdf && (
                     <Link
                       href={publication.links.pdf}
-                      className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                      className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                     >
-                      <BookOpen className="h-4 w-4 mr-1" /> PDF
+                      <BookOpen className="h-4 w-4 mr-1 text-primary" /> PDF
                     </Link>
                   )}
                   {publication.links.bibtex && (
                     <Link
                       href={publication.links.bibtex}
-                      className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                      className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                     >
-                      <Download className="h-4 w-4 mr-1" /> BibTeX
+                      <Download className="h-4 w-4 mr-1 text-primary" /> BibTeX
                     </Link>
                   )}
                   {publication.links.journal && (
@@ -81,9 +81,9 @@ export function PublicationsSection() {
                       href={publication.links.journal}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-medium flex items-center hover:text-primary transition-colors"
+                      className="text-sm font-medium flex items-center text-primary hover:text-primary/80 transition-colors"
                     >
-                      <ExternalLink className="h-4 w-4 mr-1" /> Journal
+                      <ExternalLink className="h-4 w-4 mr-1 text-primary" /> Journal
                     </Link>
                   )}
                 </div>
@@ -96,7 +96,7 @@ export function PublicationsSection() {
       <div className="mt-8 text-center">
         <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
           <Link href="/publications" className="flex items-center">
-            View Complete Publication List <ExternalLink className="ml-2 h-4 w-4" />
+            View Complete Publication List <ExternalLink className="ml-2 h-4 w-4 text-primary" />
           </Link>
         </Button>
       </div>

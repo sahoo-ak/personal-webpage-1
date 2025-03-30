@@ -1,13 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
 import { personalInfo, socialLinks } from "@/data/profile"
 
 export function HomeSection() {
   return (
     <section id="home" className="container py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-16">
-        <div className="space-y-6">
+        <div className="space-y-8">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{personalInfo.name}</h1>
           <p className="max-w-[600px] text-muted-foreground md:text-xl">
             {personalInfo.title} at {personalInfo.institution}, {personalInfo.description}
@@ -17,10 +18,15 @@ export function HomeSection() {
               <Link href="#research">Research Areas</Link>
             </Button>
             <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
-              <Link href="#publications">Publications</Link>
+              <a href="https://example.com/cv" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <Download className="mr-2 h-4 w-4" /> CV
+              </a>
+            </Button>
+            <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
+              <Link href="#contact">Contact</Link>
             </Button>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-14">
             {socialLinks.map((link, index) => (
               <Link
                 key={index}
@@ -29,7 +35,7 @@ export function HomeSection() {
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                <link.icon className="h-6 w-6" />
+                <link.icon className="h-9 w-9" />
                 <span className="sr-only">{link.platform}</span>
               </Link>
             ))}

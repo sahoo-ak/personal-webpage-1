@@ -2,9 +2,10 @@
 
 import type React from "react"
 import { useEffect, useState } from "react"
+import type { Section, DropdownSection } from "@/types"
 
 interface SectionObserverProps {
-  sections: { id: string; label: string }[]
+  sections: (Section | DropdownSection)[]
   children: React.ReactNode
 }
 
@@ -39,12 +40,12 @@ export function SectionObserver({ sections, children }: SectionObserverProps) {
     const observer = new IntersectionObserver(observerCallback, observerOptions)
 
     // Observe all section elements
-    sections.forEach(({ id }) => {
-      const element = document.getElementById(id)
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id)
       if (element) {
         observer.observe(element)
       } else {
-        console.warn(`Section with id "${id}" not found in the DOM`)
+        console.warn(`Section with id "${section.id}" not found in the DOM`)
       }
     })
 
