@@ -18,7 +18,7 @@ export function HomeSection() {
               <Link href="#research">Research Areas</Link>
             </Button>
             <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
-              <a href="https://example.com/cv" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <a href="https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/ER0HxyGAAmxCstVylGTNGRMBhYasDBOwdnNFGQqDCssy4w?e=YtzWNW" target="_blank" rel="noopener noreferrer" className="flex items-center">
                 <Download className="mr-2 h-4 w-4" /> CV
               </a>
             </Button>

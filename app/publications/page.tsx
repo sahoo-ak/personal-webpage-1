@@ -10,7 +10,7 @@ const formatAuthors = (authors: string) => {
     const isLastAuthor = index === array.length - 1
     const separator = isLastAuthor ? "" : ", "
 
-    if (author === "A. Chen" || author === "Ale Chen") {
+    if (author === "A. K. Sahoo" || author === "Aloka Kumar Sahoo") {
       return (
         <span key={index} className="text-foreground font-medium">
           {author}
