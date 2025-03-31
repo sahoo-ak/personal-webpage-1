@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { NavbarWithActiveSection } from "@/components/navbar-with-active-section"
 import { SectionObserver } from "@/components/section-observer"
-import { personalInfo, socialLinks, navigationSections } from "@/data/profile"
+import { personalInfo, navigationSections } from "@/data/profile"
+import { Footer } from "@/components/footer"
 
 // Import section components
 import { HomeSection } from "@/components/sections/home-section"
@@ -54,27 +55,8 @@ export function PersonalWebsiteContent() {
           <ContactSection />
         </SectionObserver>
       </main>
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm leading-loose text-primary md:text-left">
-            © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            {socialLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-colors"
-              >
-                <i className={`${link.iconClass} text-lg`} aria-hidden="true"></i>
-                <span className="sr-only">{link.platform}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </footer>
+
+      <Footer showSocialIcons={true} />
     </div>
   )
 }

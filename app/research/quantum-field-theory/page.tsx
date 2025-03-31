@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Users, BookOpen } from "lucide-react"
+import { Footer } from "@/components/footer"
 
 export default function QuantumFieldTheoryPage() {
   return (
@@ -126,20 +127,14 @@ export default function QuantumFieldTheoryPage() {
 
         <div className="mt-12 text-center">
           <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
-            <Link href="/#research" className="flex items-center">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Research
+            <Link href="/#conferences" className="flex items-center">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
             </Link>
           </Button>
         </div>
       </main>
 
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} Dr. Alex Chen. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer showSocialIcons={false} />
     </div>
   )
 }

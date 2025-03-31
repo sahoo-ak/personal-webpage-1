@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ExternalLink, Download, ArrowLeft, BookOpen } from "lucide-react"
 import { publications } from "@/data/publications"
+import { Footer } from "@/components/footer"
 
 // Helper function to highlight author name
 const formatAuthors = (authors: string) => {
@@ -135,13 +136,7 @@ export default function PublicationsPage() {
         </div>
       </main>
 
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm leading-loose text-primary md:text-left">
-            © {new Date().getFullYear()} Dr. Alex Chen. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer showSocialIcons={false} />
     </div>
   )
 }

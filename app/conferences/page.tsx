@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, MapPin, Presentation, School } from "lucide-react"
 import { academicEvents } from "@/data/conferences"
+import { Footer } from "@/components/footer"
 
 export default function ConferencesPage() {
   return (
@@ -73,13 +74,7 @@ export default function ConferencesPage() {
         </div>
       </main>
 
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} Dr. Alex Chen. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer showSocialIcons={false} />
     </div>
   )
 }
