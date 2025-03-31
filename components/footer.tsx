@@ -19,7 +19,7 @@ export function Footer({ showSocialIcons = true }: FooterProps) {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-foreground order-2 md:order-1">Last updated on {formattedDate}</p>
           <p className="text-sm text-foreground text-center order-1 md:order-2">
-            © {new Date().getFullYear()} Dr. Alex Chen. All rights reserved.
+            © {new Date().getFullYear()} Dr. Aloka Kumar Sahoo. All rights reserved.
           </p>
           <div className="flex gap-4 order-3 md:justify-end md:min-w-[200px]">
             {showSocialIcons
