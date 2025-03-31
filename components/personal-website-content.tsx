@@ -68,7 +68,7 @@ export function PersonalWebsiteContent() {
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                <link.icon className="h-5 w-5" />
+                <i className={`${link.iconClass} text-lg`} aria-hidden="true"></i>
                 <span className="sr-only">{link.platform}</span>
               </Link>
             ))}

@@ -26,7 +26,7 @@ export function HomeSection() {
               <Link href="#contact">Contact</Link>
             </Button>
           </div>
-          <div className="flex gap-14">
+          <div className="flex gap-12">
             {socialLinks.map((link, index) => (
               <Link
                 key={index}
@@ -35,7 +35,7 @@ export function HomeSection() {
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                <link.icon className="h-9 w-9" />
+                <i className={`${link.iconClass} text-4xl`} aria-hidden="true"></i>
                 <span className="sr-only">{link.platform}</span>
               </Link>
             ))}

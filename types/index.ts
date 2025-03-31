@@ -4,7 +4,8 @@ import type { ComponentType, SVGProps } from "react"
 export interface SocialLink {
   platform: string
   url: string
-  icon: ComponentType<SVGProps<SVGSVGElement>> | LucideIcon
+  iconClass?: string
+  icon?: ComponentType<SVGProps<SVGSVGElement>> | LucideIcon
 }
 
 export interface Section {
@@ -55,6 +56,7 @@ export interface Publication {
   citations?: number
   description?: string
   featured?: boolean
+  doi?: string
   links: {
     pdf?: string
     bibtex?: string
@@ -103,6 +105,7 @@ export interface SpecializedTool {
 
 export interface ContactInfo {
   email: string
+  phone?: string
   address: {
     department: string
     university: string

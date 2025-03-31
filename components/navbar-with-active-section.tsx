@@ -16,6 +16,7 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
   const [mounted, setMounted] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Only run on client side
   useEffect(() => {
@@ -37,21 +38,14 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     // Add event listener for the custom event
     document.addEventListener("sectionInView", handleSectionInView as EventListener)
 
-    // Handle clicks outside dropdowns
-    const handleClickOutside = (event: MouseEvent) => {
-      if (openDropdown && !dropdownRefs.current[openDropdown]?.contains(event.target as Node)) {
-        setOpenDropdown(null)
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-
     // Clean up
     return () => {
       document.removeEventListener("sectionInView", handleSectionInView as EventListener)
-      document.removeEventListener("mousedown", handleClickOutside)
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
     }
-  }, [sections, openDropdown])
+  }, [sections])
 
   // Handle click on navigation links
   const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
@@ -65,10 +59,19 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
     }
   }
 
-  // Toggle dropdown
-  const toggleDropdown = (e: React.MouseEvent, sectionId: string) => {
-    e.preventDefault()
-    setOpenDropdown(openDropdown === sectionId ? null : sectionId)
+  // Handle mouse enter for dropdown
+  const handleMouseEnter = (sectionId: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+    setOpenDropdown(sectionId)
+  }
+
+  // Handle mouse leave for dropdown
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null)
+    }, 100) // Small delay to prevent flickering when moving between button and dropdown
   }
 
   // Check if a section is active (including dropdown items)
@@ -111,6 +114,8 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
                 dropdownRefs.current[section.id] = el
               }
             }}
+            onMouseEnter={() => isDropdown && handleMouseEnter(section.id)}
+            onMouseLeave={isDropdown ? handleMouseLeave : undefined}
           >
             {isDropdown ? (
               <>
@@ -118,7 +123,6 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
                   className={`text-sm font-medium transition-colors relative group inline-flex items-center gap-1 p-0 border-0 bg-transparent ${
                     isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
                   }`}
-                  onClick={(e) => toggleDropdown(e, section.id)}
                 >
                   {section.label}
                   <ChevronDown className="h-4 w-4" />
@@ -129,7 +133,11 @@ export function NavbarWithActiveSection({ sections }: NavbarProps) {
                   />
                 </button>
                 {openDropdown === section.id && (
-                  <div className="absolute top-full left-0 mt-2 py-2 bg-background border rounded-md shadow-md min-w-[150px] z-50">
+                  <div
+                    className="absolute top-full left-0 mt-2 py-2 bg-background border rounded-md shadow-md min-w-[150px] z-50"
+                    onMouseEnter={() => handleMouseEnter(section.id)}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     {section.dropdown.map((item) => (
                       <Link
                         key={item.id}

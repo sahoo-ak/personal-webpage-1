@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Presentation, GraduationCap } from "lucide-react"
+import { ArrowLeft, MapPin, Presentation, School } from "lucide-react"
 import { academicEvents } from "@/data/conferences"
 
 export default function ConferencesPage() {
@@ -10,7 +10,7 @@ export default function ConferencesPage() {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="font-semibold text-xl">
-            Dr. Alex Chen
+            Aloka Kumar Sahoo
           </Link>
           <Button variant="ghost" size="sm" asChild>
             <Link href="/#conferences" className="flex items-center gap-2">
@@ -39,7 +39,7 @@ export default function ConferencesPage() {
                     {event.type === "conference" ? (
                       <Presentation className="h-6 w-6 text-primary" />
                     ) : (
-                      <GraduationCap className="h-6 w-6 text-primary" />
+                      <School className="h-6 w-6 text-primary" />
                     )}
                   </div>
                   <div>
@@ -47,7 +47,7 @@ export default function ConferencesPage() {
                       <h3 className="text-xl font-bold">{event.title}</h3>
                       <span className="text-sm text-muted-foreground sm:ml-auto">{event.date}</span>
                     </div>
-                    <div className="flex flex-wrap gap-x-4 gap-y-2 mb-2">
+                    <div className="flex flex-col gap-2 mb-2">
                       <div className="flex items-center text-sm text-muted-foreground">
                         <MapPin className="h-4 w-4 mr-1" />
                         {event.location}

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { MapPin, Presentation, GraduationCap, ExternalLink } from "lucide-react"
+import { MapPin, Presentation, School, ExternalLink } from "lucide-react"
 import { academicEvents } from "@/data/conferences"
 
 export function ConferencesSection() {
@@ -23,7 +23,7 @@ export function ConferencesSection() {
                   {event.type === "conference" ? (
                     <Presentation className="h-6 w-6 text-primary" />
                   ) : (
-                    <GraduationCap className="h-6 w-6 text-primary" />
+                    <School className="h-6 w-6 text-primary" />
                   )}
                 </div>
                 <div>
@@ -31,7 +31,7 @@ export function ConferencesSection() {
                     <h3 className="text-xl font-bold">{event.title}</h3>
                     <span className="text-sm text-muted-foreground sm:ml-auto">{event.date}</span>
                   </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-2 mb-2">
+                  <div className="flex flex-col gap-2 mb-2">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <MapPin className="h-4 w-4 mr-1" />
                       {event.location}

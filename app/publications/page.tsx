@@ -68,6 +68,20 @@ export default function PublicationsPage() {
                       {publication.volume && <span className="font-bold">{publication.volume}</span>}
                       {publication.issue && <span className="font-bold">({publication.issue})</span>}
                       {publication.pages && <span>: {publication.pages}</span>} ({publication.year})
+                      {publication.doi && (
+                        <span>
+                          {" "}
+                          DOI:{" "}
+                          <a
+                            href={`https://doi.org/${publication.doi}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {publication.doi}
+                          </a>
+                        </span>
+                      )}
                     </p>
                     {publication.citations && (
                       <p className="text-sm mt-2">

@@ -10,6 +10,7 @@ export const publications: Publication[] = [
     volume: "58",
     pages: "075201",
     year: 2025,
+    doi: "10.1088/1361-6455/adc2bc",
     featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/Efbv7AgNaZ5Hh0YkpB1s_aAB2m-yr2hU4siUZOgn7tRCcg?e=Jw34h8",
@@ -24,6 +25,7 @@ export const publications: Publication[] = [
     volume: "13(3)",
     pages: "23",
     year: 2025,
+    doi: "10.3390/atoms13030023",
     featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EWLQ_eczr7ZJvk_LcEZV8mUBXNz_R50n3LNyktiPWc9xJQ?e=Gk146o",
@@ -38,6 +40,7 @@ export const publications: Publication[] = [
     volume: "139",
     pages: "986",
     year: 2024,
+    doi: "10.1140/epjp/s13360-024-05747-2",
     featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdqvtihsUa5EgbUwtS8CZ24BDA96bZCuYJ5CKtRSx2rlmQ?e=ocRjLP",
@@ -52,6 +55,8 @@ export const publications: Publication[] = [
     volume: "99(9)",
     pages: "095410",
     year: 2024,
+    doi: "10.1088/1402-4896/ad6f51",
+    featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EcFl96JDf-RAsGG7W2-MpAwBMief8zhZtHKSwaPGDzfg0Q?e=1dKNzs",
       bibtex: "#",
@@ -66,6 +71,7 @@ export const publications: Publication[] = [
     volume: "78(6)",
     pages: "75",
     year: 2024,
+    doi: "10.1140/epjd/s10053-024-00865-z",
     featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EQoa56uhN75EsaeEdF7kFVgBTRZTiazltuCRzXxLw9Xj7g?e=xB5tLz",
@@ -80,6 +86,8 @@ export const publications: Publication[] = [
       volume: "10(4)",
       pages: "136",
       year: 2022,
+      doi: "10.3390/atoms10040136",
+      featured: true,
       links: {
         pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EeMuk4BjXFxGlTYB-9WnM2wBR-GAC7oURcoc-YHNmTO0Tw?e=XNcTfe",
         bibtex: "#",
@@ -94,6 +102,7 @@ export const publications: Publication[] = [
     volume: "55",
     pages: "165203",
     year: 2022,
+    doi: "10.1088/1361-6455/ac7924",
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EctHbtVjXPNCs-9LKbOew2YBqMYzeu93Gi4N_4OhjnFTGQ?e=JPG0z9",
       bibtex: "#",
@@ -107,6 +116,8 @@ export const publications: Publication[] = [
     volume: "9(4)",
     pages: "76",
     year: 2021,
+    doi: "10.3390/atoms9040076",
+    featured: true,
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdgRXI4GQ2NFs2g1pRz6t5EBEhmQQBz5zx53IIbMIWsbrA?e=8IK5j6",
       bibtex: "#",
@@ -120,6 +131,7 @@ export const publications: Publication[] = [
     volume: "25",
     pages: "5147",
     year: 2020,
+    doi: "10.1021/acs.jpca.0c02245",
     links: {
       pdf: "https://iitracin-my.sharepoint.com/:b:/g/personal/aloka_s_ph_iitr_ac_in/EdntOCELvw1EscqknUESIQ0BfAsQu_3dDlOSEaPLXjHlAw?e=y5dnLf",
       bibtex: "#",

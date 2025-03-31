@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Mail, Users } from "lucide-react"
+import { Mail, Users, Phone } from "lucide-react"
 import { contactInfo } from "@/data/contact"
 import { GoogleScholarIcon } from "@/components/icons/google-scholar-icon"
 import { ResearchGateIcon } from "@/components/icons/researchgate-icon"
@@ -20,6 +20,12 @@ export function ContactSection() {
               <Mail className="h-5 w-5 text-primary" />
               <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition-colors">
                 {contactInfo.email}
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <Phone className="h-5 w-5 text-primary" />
+              <a href={`tel:${contactInfo.phone}`} className="hover:text-primary transition-colors">
+                {contactInfo.phone}
               </a>
             </div>
             <div className="flex items-start gap-3">
@@ -43,7 +49,7 @@ export function ContactSection() {
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <GoogleScholarIcon className="h-5 w-5 text-primary" />
+              <i className="ai ai-google-scholar text-xl text-primary" aria-hidden="true"></i>
               <a
                 href="https://scholar.google.com"
                 target="_blank"
@@ -54,7 +60,7 @@ export function ContactSection() {
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <ResearchGateIcon className="h-5 w-5 text-primary" />
+              <i className="ai ai-researchgate text-xl text-primary" aria-hidden="true"></i>
               <a
                 href="https://researchgate.net"
                 target="_blank"
@@ -64,6 +70,28 @@ export function ContactSection() {
                 ResearchGate Profile
               </a>
             </div>
+            {/* <div className="flex items-center gap-3">
+              <i className="ai ai-scopus text-xl text-primary" aria-hidden="true"></i>
+              <a
+                href="https://scopus.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Scopus Profile
+              </a>
+            </div> */}
+            {/* <div className="flex items-center gap-3">
+              <i className="ai ai-researcherid text-xl text-primary" aria-hidden="true"></i>
+              <a
+                href="https://www.webofscience.com/wos/author/record/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                ResearcherID Profile
+              </a>
+            </div> */}
           </div>
         </div>
         <div className="space-y-4">

@@ -2,6 +2,7 @@ import type { ContactInfo } from "@/types"
 
 export const contactInfo: ContactInfo = {
   email: "aloka_s@ph.iitr.ac.in, aloka.ku.sahoo@gmail.com",
+  phone: "+49 (3641) 947-622",
   address: {
     department: "Atomic Physics Group",
     university: "Helmholtz Institute Jena Germany",
