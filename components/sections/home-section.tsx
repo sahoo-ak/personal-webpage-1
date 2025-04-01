@@ -10,9 +10,11 @@ export function HomeSection() {
       <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-16">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{personalInfo.name}</h1>
-          <p className="max-w-[600px] text-muted-foreground md:text-xl">
-            {personalInfo.title} at {personalInfo.institution}, {personalInfo.description}
-          </p>
+          <div className="space-y-2 text-muted-foreground md:text-xl">
+              <p>{personalInfo.title}</p>
+              <p>{personalInfo.institution}</p>
+              <p>{personalInfo.description}</p>
+            </div>
           <div className="flex gap-4">
             <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>
               <Link href="#research">Research Areas</Link>
