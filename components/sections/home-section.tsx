@@ -6,7 +6,8 @@ import { personalInfo, socialLinks } from "@/data/profile"
 
 export function HomeSection() {
   return (
-    <section id="home" className="container py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="home" className="w-full min-h-screen flex items-center justify-center">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
       <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-16">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{personalInfo.name}</h1>
@@ -51,6 +52,7 @@ export function HomeSection() {
             className="object-cover"
             priority
           />
+        </div>
         </div>
       </div>
     </section>
