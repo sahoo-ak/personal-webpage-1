@@ -31,9 +31,9 @@ export function ContactSection() {
             <div className="flex items-start gap-3">
               <Users className="h-5 w-5 mt-1 text-primary" />
               <div>
+                <p>{contactInfo.address.street}</p>
                 <p>{contactInfo.address.department}</p>
                 <p>{contactInfo.address.university}</p>
-                <p>{contactInfo.address.street}</p>
                 <p>{contactInfo.address.city}</p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export function ContactSection() {
                 Google Scholar Profile
               </a>
             </div>
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <i className="ai ai-researchgate text-xl text-primary" aria-hidden="true"></i>
               <a
                 href="https://researchgate.net"
@@ -69,7 +69,7 @@ export function ContactSection() {
               >
                 ResearchGate Profile
               </a>
-            </div>
+            </div> */}
             {/* <div className="flex items-center gap-3">
               <i className="ai ai-scopus text-xl text-primary" aria-hidden="true"></i>
               <a
