@@ -15,32 +15,32 @@ export const personalInfo = {
 export const socialLinks: SocialLink[] = [
   {
     platform: "Google Scholar",
-    url: "https://scholar.google.com",
+    url: "https://scholar.google.com/citations?user=kLeggdsAAAAJ&hl=en",
     iconClass: "ai ai-google-scholar",
   },
   {
     platform: "ResearchGate",
-    url: "https://researchgate.net",
+    url: "https://www.researchgate.net/profile/Aloka-Sahoo-2",
     iconClass: "ai ai-researchgate",
   },
   {
     platform: "ORCID",
-    url: "https://orcid.org",
+    url: "https://orcid.org/0000-0003-2441-4075",
     iconClass: "ai ai-orcid",
   },
   {
     platform: "Scopus",
-    url: "https://scopus.com",
+    url: "https://www.scopus.com/authid/detail.uri?authorId=57217350178",
     iconClass: "ai ai-scopus",
   },
   {
     platform: "ResearcherID",
-    url: "https://www.webofscience.com/wos/author/record/",
+    url: "https://www.webofscience.com/wos/author/record/KRQ-9261-2024",
     iconClass: "ai ai-researcherid",
   },
   {
     platform: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/sahoo-ak",
     iconClass: "ai ai-github",
   },
 ]

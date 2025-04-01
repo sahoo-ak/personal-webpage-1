@@ -28,7 +28,7 @@ export function HomeSection() {
               <Link href="#contact">Contact</Link>
             </Button>
           </div>
-          <div className="flex gap-12">
+          <div className="flex gap-11">
             {socialLinks.map((link, index) => (
               <Link
                 key={index}
