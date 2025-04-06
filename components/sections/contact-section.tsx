@@ -51,7 +51,7 @@ export function ContactSection() {
             <div className="flex items-center gap-3">
               <i className="ai ai-google-scholar text-xl text-primary" aria-hidden="true"></i>
               <a
-                href="https://scholar.google.com"
+                href="https://scholar.google.com/citations?user=kLeggdsAAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"

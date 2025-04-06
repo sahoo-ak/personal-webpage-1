@@ -6,12 +6,12 @@ import { Footer } from "@/components/footer"
 
 // Import section components
 import { HomeSection } from "@/components/sections/home-section"
-import { EducationSection } from "@/components/sections/education-section"
 import { ResearchSection } from "@/components/sections/research-section"
+import { EducationSection } from "@/components/sections/education-section"
 import { PublicationsSection } from "@/components/sections/publications-section"
-import { ConferencesSection } from "@/components/sections/conferences-section"
 import { ResearchExperienceSection } from "@/components/sections/research-experience-section"
 import { TeachingExperienceSection } from "@/components/sections/teaching-experience-section"
+import { ConferencesSection } from "@/components/sections/conferences-section"
 import { AwardsSection } from "@/components/sections/awards-section"
 import { SkillsSection } from "@/components/sections/skills-section"
 import { ContactSection } from "@/components/sections/contact-section"
@@ -44,12 +44,12 @@ export function PersonalWebsiteContent() {
         {/* Wrap all sections with the observer component */}
         <SectionObserver sections={allSections}>
           <HomeSection />
-          <EducationSection />
           <ResearchSection />
+          <EducationSection />
           <PublicationsSection />
-          <ConferencesSection />
           <ResearchExperienceSection />
           <TeachingExperienceSection />
+          <ConferencesSection />
           <AwardsSection />
           <SkillsSection />
           <ContactSection />

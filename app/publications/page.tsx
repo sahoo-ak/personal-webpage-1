@@ -38,7 +38,7 @@ export default function PublicationsPage() {
             Dr. Alex Chen
           </Link>
           <Button variant="ghost" size="sm" asChild>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/#publications" className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" /> Back to Home
             </Link>
           </Button>

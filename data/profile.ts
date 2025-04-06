@@ -1,8 +1,5 @@
 import type { SocialLink, Section, DropdownSection } from "@/types"
-import { GoogleScholarIcon } from "@/components/icons/google-scholar-icon"
-import { ResearchGateIcon } from "@/components/icons/researchgate-icon"
-import { OrcidIcon } from "@/components/icons/orcid-icon"
-import { GitHubIcon } from "@/components/icons/github-icon"
+
 
 export const personalInfo = {
   name: "Dr. Aloka Kumar Sahoo",
@@ -47,10 +44,9 @@ export const socialLinks: SocialLink[] = [
 
 export const navigationSections: (Section | DropdownSection)[] = [
   { id: "home", label: "Home" },
-  { id: "education", label: "Education" },
   { id: "research", label: "Research" },
+  { id: "education", label: "Education" },
   { id: "publications", label: "Publications" },
-  { id: "conferences", label: "Conferences" },
   {
     id: "experience",
     label: "Experience",
@@ -59,8 +55,8 @@ export const navigationSections: (Section | DropdownSection)[] = [
       { id: "teaching-experience", label: "Teaching" },
     ],
   },
+  { id: "conferences", label: "Conferences" },
   { id: "awards", label: "Awards" },
   { id: "skills", label: "Skills" },
-  // Contact section removed from navigation
 ]
 

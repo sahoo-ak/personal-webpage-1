@@ -5,7 +5,7 @@ import { awardsData } from "@/data/awards"
 export function AwardsSection() {
   return (
     <section id="awards" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">Awards & Honors</h2>
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">Awards & Memberships</h2>
 
       <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
         {awardsData.map((award, index) => (

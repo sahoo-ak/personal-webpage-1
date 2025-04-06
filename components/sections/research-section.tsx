@@ -5,13 +5,28 @@ import { ArrowRight } from "lucide-react"
 import { researchAreas } from "@/data/research"
 
 export function ResearchSection() {
+  // Calculate if we need to center the last row
+  const totalItems = researchAreas.length
+  const itemsInLastRow = totalItems % 3
+  const shouldCenterLastRow = itemsInLastRow > 0 && itemsInLastRow < 3
+
   return (
     <section id="research" className="container py-24 sm:py-32 border-t max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">Research</h2>
 
       <div className="grid gap-8 md:grid-cols-3">
-        {researchAreas.slice(0, 3).map((area, index) => (
-          <Card key={index} className="flex flex-col">
+        {researchAreas.slice(0,3).map((area, index) => (
+          <Card
+            key={index}
+            className={`flex flex-col ${
+              shouldCenterLastRow && index >= totalItems - itemsInLastRow ? "md:col-span-1 md:mx-auto md:w-full" : ""
+            }`}
+            style={
+              shouldCenterLastRow && index >= totalItems - itemsInLastRow
+                ? { gridColumn: index === totalItems - 1 && itemsInLastRow === 1 ? "2" : "auto" }
+                : {}
+            }
+          >
             <CardContent className="flex-grow p-6">
               <h3 className="text-xl font-bold mb-2">{area.title}</h3>
               <p className="text-muted-foreground">{area.description}</p>

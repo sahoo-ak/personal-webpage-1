@@ -84,7 +84,7 @@ export interface Award {
   title: string
   organization: string
   year: string
-  description: string
+  description?: string
   isWide?: boolean
 }
 

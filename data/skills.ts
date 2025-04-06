@@ -13,7 +13,7 @@ export const programmingSkills: Skill[] = [
   },
   {
     name: "Python",
-    level: "Advanced",
+    level: "Intermediate",
     percentage: 70,
   },
 ]
