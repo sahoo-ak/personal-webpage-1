@@ -64,15 +64,6 @@ export interface Publication {
   }
 }
 
-export interface Conference {
-  title: string
-  location: string
-  date: string
-  role: string
-  description: string
-  logo: string
-}
-
 export interface Experience {
   title: string
   company: string
@@ -117,6 +108,7 @@ export interface ContactInfo {
 
 export interface AcademicEvent {
   title: string
+  organization: string
   location: string
   date: string
   role: string

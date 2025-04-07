@@ -34,7 +34,8 @@ export function ResearchSection() {
             <CardFooter className="pt-0 pb-6 px-6">
               <Button variant="outline" className="border-primary hover:bg-primary/10 w-full" asChild>
                 <Link
-                  href={`/research/${area.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  href="/#research"
+                  // href={`/research/${area.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className="flex items-center justify-center"
                 >
                   Read More <ArrowRight className="ml-2 h-4 w-4" />

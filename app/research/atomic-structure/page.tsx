@@ -3,15 +3,16 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Users, BookOpen } from "lucide-react"
+import { personalInfo} from "@/data/profile"
 import { Footer } from "@/components/footer"
 
-export default function QuantumFieldTheoryPage() {
+export default function AtomicStructurePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="font-semibold text-xl">
-            Dr. Alex Chen
+          {personalInfo.name}
           </Link>
           <Button variant="ghost" size="sm" asChild>
             <Link href="/#research" className="flex items-center gap-2">
@@ -25,27 +26,24 @@ export default function QuantumFieldTheoryPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Quantum Field Theory</h1>
           <p className="text-muted-foreground max-w-[700px] text-lg">
-            My work in quantum field theory focuses on developing new mathematical frameworks for understanding strongly
-            correlated quantum systems. This includes applications to high-temperature superconductivity and quantum
-            criticality.
+            My work in atomic structure theory focuses on the theoretical and computational aspects of heavy and complex shell atomic systems.
           </p>
         </div>
 
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8">
+        {/* <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8">
           <Image src="/placeholder.svg?height=400&width=800" alt="Quantum Field Theory" fill className="object-cover" />
         </div>
 
         <div className="prose prose-lg max-w-none dark:prose-invert mb-12">
           <p>
-            Quantum Field Theory (QFT) provides the mathematical framework for modern particle physics and condensed
-            matter theory. My research in this area focuses on developing new theoretical tools to understand strongly
-            correlated quantum systems.
+            Atomic structure calculations such as for heavy atoms and ions, complex shell atomic systems, and
+            relativistic effects are crucial for understanding the fundamental interactions in atomic systems.
           </p>
 
           <p>Key aspects of my research include:</p>
 
           <ul>
-            <li>Developing effective field theories for emergent phenomena in condensed matter systems</li>
+            <li>Calculation of atomic energy levels, transition rates and life times etc. using MCDHF approach.</li>
             <li>
               Studying non-perturbative effects in quantum field theories using functional renormalization group methods
             </li>
@@ -123,7 +121,7 @@ export default function QuantumFieldTheoryPage() {
               </CardContent>
             </Card>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-12 text-center">
           <Button variant="outline" className="border-primary hover:bg-primary/10" asChild>

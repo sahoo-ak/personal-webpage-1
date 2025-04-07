@@ -3,15 +3,16 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Users, BookOpen } from "lucide-react"
+import { personalInfo} from "@/data/profile"
 import { Footer } from "@/components/footer"
 
-export default function TopologicalPhasesPage() {
+export default function ElectronAtomInteractionsPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="font-semibold text-xl">
-            Dr. Alex Chen
+            {personalInfo.name}
           </Link>
           <Button variant="ghost" size="sm" asChild>
             <Link href="/#research" className="flex items-center gap-2">
@@ -24,7 +25,7 @@ export default function TopologicalPhasesPage() {
       <main className="flex-1 container py-12 max-w-5xl mx-auto px-4">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-            Topological Phases of Matter
+            Electron-Atom Interactions
           </h1>
           <p className="text-muted-foreground max-w-[700px] text-lg">
             I study topological phases in condensed matter systems, including topological insulators, topological

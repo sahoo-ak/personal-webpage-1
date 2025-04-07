@@ -34,13 +34,13 @@ export function ConferencesSection() {
                   <div className="flex flex-col gap-2 mb-2">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <MapPin className="h-4 w-4 mr-1" />
-                      {event.location}
+                      {event.organization} {event.location}
                     </div>
                     <div className="flex items-center text-sm">
-                      <span className="font-medium mr-1">Role:</span> {event.role}
+                      <span className="font-medium mr-1"></span> {event.role} {event.description}
                     </div>
                   </div>
-                  <p className="text-muted-foreground">{event.description}</p>
+                  {/* <p className="text-muted-foreground">{event.description}</p> */}
                 </div>
               </div>
             </CardContent>

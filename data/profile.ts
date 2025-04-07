@@ -3,7 +3,7 @@ import type { SocialLink, Section, DropdownSection } from "@/types"
 
 export const personalInfo = {
   name: "Dr. Aloka Kumar Sahoo",
-  title: "Postdoctoral Researcher in Theoretical Physics",
+  title: "Postdoctoral Researcher in Theoretical Atomic Physics",
   institution: "Helmholtz-Insitut Jena, Germany",
   description: "Specializing in Atomic Physics.",
   profileImage: "./photo-1.JPG",

@@ -3,15 +3,16 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Users, BookOpen } from "lucide-react"
+import { personalInfo} from "@/data/profile"
 import { Footer } from "@/components/footer"
 
-export default function QuantumFieldTheoryPage() {
+export default function AtomicCascades() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="font-semibold text-xl">
-            Dr. Alex Chen
+            {personalInfo.name}
           </Link>
           <Button variant="ghost" size="sm" asChild>
             <Link href="/#research" className="flex items-center gap-2">
@@ -23,7 +24,7 @@ export default function QuantumFieldTheoryPage() {
 
       <main className="flex-1 container py-12 max-w-5xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Quantum Field Theory</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Atomic Cascades</h1>
           <p className="text-muted-foreground max-w-[700px] text-lg">
             My work in quantum field theory focuses on developing new mathematical frameworks for understanding strongly
             correlated quantum systems. This includes applications to high-temperature superconductivity and quantum

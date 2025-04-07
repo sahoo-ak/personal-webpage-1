@@ -4,22 +4,22 @@ export const researchAreas: ResearchArea[] = [
   {
     title: "Atomic Structure",
     description:
-      "My work in quantum field theory focuses on developing new mathematical frameworks for understanding strongly correlated quantum systems. This includes applications to high-temperature superconductivity and quantum criticality.",
+      "Exploring relativistic effects and electron correlations in heavy atomic systems to understand spectroscopic properties, energy levels, and their implications for fundamental physics, including precision tests of quantum electrodynamics.",
   },
   {
-    title: "Electron Atom Interactions",
+    title: "Electron-Atom Interactions",
     description:
-      "I study topological phases in condensed matter systems, including topological insulators, topological superconductors, and quantum spin liquids. My research aims to classify these phases and understand their exotic properties.",
+      "Investigating elastic and inelastic electron scattering from atoms and ions using the Relativistic Distorted Wave approximation to uncover interaction mechanisms, cross-section behaviors, and their relevance to plasma modeling and astrophysical phenomena.",
   },
   {
     title: "Confined Atomic Systems",
     description:
-      "I investigate the intersection of quantum information theory and condensed matter physics, particularly entanglement properties of many-body systems and their applications to quantum computing.",
+      "Studying electron scattering in confined systems like C60-fullerene to analyze quantum confinement effects, electron correlations, resonance phenomena, and their potential applications in different branches of physics.",
   },
   {
     title: "Atomic Cascades",
     description:
-      "My research addresses the challenging problem of strongly interacting electrons in materials, developing theoretical tools to understand phenomena like high-temperature superconductivity and quantum magnetism.",
+      "Performing atomic cascade calculations to understand energy transfer processes in highly excited systems, with applications in astrophysics, plasma physics, and the modeling of radiative processes in extreme environments such as neutron stars mergers.",
   },
 ]
 

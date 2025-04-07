@@ -4,101 +4,64 @@ import type { AcademicEvent } from "@/types"
 export const academicEvents: AcademicEvent[] = [
   // Add conferences
   {
-    title: "APS March Meeting 2023",
-    location: "Las Vegas, Nevada, USA",
-    date: "March 2023",
-    role: 'Talk: "Topological Order and Quantum Criticality in Twisted Bilayer Graphene"',
-    description:
-      "Presented recent findings on the interplay between topology and quantum criticality in twisted bilayer graphene, focusing on the emergence of novel quantum phases at magic angles.",
+    title: "24th National Conference on Atomic and Molecular Physics (NCAMP25)",
+    organization: "Indian Institute of Techlogy (ISM) Dhanabad",
+    location: "Dhanbad, India",
+    date: "08-11 Jan 2025",
+    role: 'Poster: ',
+    description: "Electron impact excitation of bismuth.",
     type: "conference",
     featured: true,
   },
   {
-    title: "International Conference on Topological Quantum Matter",
-    location: "ICTP, Trieste, Italy",
-    date: "September 2022",
-    role: 'Poster: "Entanglement Entropy Scaling at Quantum Critical Points with Emergent Gauge Fields"',
-    description:
-      "Presented a poster on novel entanglement entropy scaling laws at quantum critical points characterized by emergent gauge fields, with implications for quantum information theory.",
+    title: "9th Topical Conference on Ultrafast Photonics and Quantum Science",
+    organization: "Physical Research Laboratory",
+    location: "Ahmedabad, India",
+    date: "15-17 Feb 2024",
+    role: 'Poster: ',
+    description: "Electron impact excitation cross section and rate coefficient calculations with JAC package.",
     type: "conference",
     featured: true,
   },
   {
-    title: "Quantum Matter Symposium",
-    location: "ETH Zurich, Switzerland",
-    date: "June 2022",
-    role: 'Invited Talk: "Non-Fermi Liquid Behavior in Strongly Correlated Electron Systems"',
-    description:
-      "Delivered an invited talk on recent advances in understanding non-Fermi liquid behavior using renormalization group techniques, with applications to strange metal phases in high-temperature superconductors.",
-    type: "conference",
-    featured: true,
-  },
-  // Add additional conferences
-  {
-    title: "American Physical Society Annual Meeting",
-    location: "Chicago, Illinois, USA",
-    date: "April 2022",
-    role: 'Contributed Talk: "Emergent Gauge Fields in Strongly Correlated Electron Systems"',
-    description:
-      "Presented research on emergent gauge fields in strongly correlated electron systems and their role in determining the low-energy physics of these systems.",
-    type: "conference",
-  },
-  {
-    title: "International Conference on Quantum Information",
-    location: "Singapore",
-    date: "January 2022",
-    role: 'Poster: "Entanglement Properties of Topological Phases"',
-    description:
-      "Presented a poster on the entanglement properties of topological phases and their applications to quantum information processing.",
-    type: "conference",
-  },
-  // Add schools
-  {
-    title: "Aspen Winter Conference on Quantum Matter",
-    location: "Aspen Center for Physics, Colorado, USA",
-    date: "January 2023",
-    role: "Participant",
-    description:
-      "Participated in intensive discussions and workshops on recent developments in quantum matter research, focusing on topological phases and strongly correlated systems.",
+    title: "International School on Atomic and Molecular Data Evaluation and Curation (ISAMDEC)",
+    organization: "University de Valladolid, Spain in cooperation with the National Institute of Standards and Technology (NIST), USA and the International Atomic Energy Agency (IAEA)",
+    location: "Valladolid, Spain",
+    date: "22-25 Oct 2023",
+    role: 'Poster: ',
+    description: "Collisional radiative modelling using relativistic e - Tl+ collision cross sections",
     type: "school",
     featured: true,
   },
   {
-    title: "Les Houches Summer School on Quantum Information and Quantum Matter",
-    location: "Les Houches, France",
-    date: "July 2021",
-    role: "Participant",
-    description:
-      "Attended lectures and workshops on the intersection of quantum information theory and condensed matter physics, with a focus on entanglement in many-body systems.",
-    type: "school",
+    title: "23rd National Conference on Atomic and Molecular Physics (NCAMP23)",
+    organization: "Indian Institute of Space Science and Technology (IIST)",
+    location: "Thiruvananthapuram, India",
+    date: "20-23 Feb 2023",
+    role: 'Poster: ',
+    description: "Collisional Radiative Model for Thallium Plasma with Fine Structure Electron Impact Cross Sections.",
+    type: "conference",
+    featured: true,
   },
   {
-    title: "KITP Program on Quantum Matter",
-    location: "Kavli Institute for Theoretical Physics, Santa Barbara, USA",
-    date: "September-December 2022",
-    role: "Visiting Researcher",
-    description:
-      "Participated in a long-term research program on quantum matter, collaborating with leading researchers in the field and presenting work on topological phases in non-Hermitian systems.",
-    type: "school",
-  },
-  // Add additional schools/workshops
-  {
-    title: "Boulder Summer School for Condensed Matter Physics",
-    location: "University of Colorado, Boulder, USA",
-    date: "July 2020",
-    role: "Student",
-    description:
-      "Attended lectures and workshops on topological phases of matter and quantum information theory, with a focus on applications to quantum computing.",
-    type: "school",
+    title: "37th National Symposium on Plasma Science & Technology (PLASMA2022)",
+    organization: "Indian Institute of Technology Jodhpur with Plasma Science Society of India (PSSI)",
+    location: "Jodhpur, Rajasthan, India",
+    date: "12-14 Dec 2023",
+    role: 'Poster: ',
+    description: "A Collisional Radiative Model for Tl Plasma.",
+    type: "conference",
+    featured: true,
   },
   {
-    title: "Quantum Materials Workshop",
-    location: "Max Planck Institute, Dresden, Germany",
-    date: "May 2021",
-    role: "Invited Participant",
-    description:
-      "Participated in a workshop focused on recent developments in quantum materials research, with emphasis on experimental techniques and theoretical models.",
-    type: "school",
+    title: "53rd Annual Meeting of the APS Division of Atomic, Molecular and Optical Physics (DAMOP 2022)",
+    organization: "American Physical Society",
+    location: "Orlando, Florida, USA",
+    date: "30 May - 3 June 2022",
+    role: 'Poster: ',
+    description: "Electron Impact Excitation of Extreme Ultra-Violet Transitions in Xe7+ – Xe10+ Ions.",
+    type: "conference",
+    featured: true,
   },
 ]
 
